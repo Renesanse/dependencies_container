@@ -11,7 +11,7 @@ void main() {
   final str = container.dependency<String>(); // once created and returned
   final str2 = container.dependency<String>(); // already created and returned from cache
   // str and str2 are same instances
-  container.clearSingleton<String>(); // removed from cache, next time call will return new one
+  container.clearSingleton<String>(); // removing from cache, next time call will return new one
   // not declared in singleton scope will return new one instance every time
   final integer = container.dependency<int>(); // once created
   final integer2 = container.dependency<int>(); // once created
