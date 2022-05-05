@@ -6,7 +6,6 @@ void main() {
       int: () => 5,
       String: () => '5',
     },
-    lazySingletons: {String}
   );
   final str = container.dependency<String>(); // once created and returned
   final str2 = container.dependency<String>(); // already created and returned from cache
